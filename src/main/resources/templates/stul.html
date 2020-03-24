@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
+    <title>Pexeso</title>
+</head>                                     
+<body>
+    <header>
+        <h1>Pexeso</h1>
+    </header>
+
+    <!--/*@thymesVar id="seznamObrazku" type="java.util.List<java.lang.String>"*/-->
+
+    <div class="kontejnerNaKartickyPexesa">
+        <img th th:each="jedenObrazek : ${seznamObrazku}"
+             th:src="${jedenObrazek}" src="../static/images/01.jpg">
+        <img th:remove="all" src="../static/images/01.jpg">
+        <img th:remove="all" src="../static/images/02.jpg">
+        <img th:remove="all" src="../static/images/02.jpg">
+        <img th:remove="all" src="../static/images/03.jpg">
+        <img th:remove="all" src="../static/images/03.jpg">
+        <img th:remove="all" src="../static/images/04.jpg">
+        <img th:remove="all" src="../static/images/04.jpg">
+        <img th:remove="all" src="../static/images/05.jpg">
+        <img th:remove="all" src="../static/images/05.jpg">
+        <img th:remove="all" src="../static/images/06.jpg">
+        <img th:remove="all" src="../static/images/06.jpg">
+        <img th:remove="all" src="../static/images/07.jpg">
+        <img th:remove="all" src="../static/images/07.jpg">
+        <img th:remove="all" src="../static/images/08.jpg">
+        <img th:remove="all" src="../static/images/08.jpg">
+    </div>
+
+</body>
+</html>

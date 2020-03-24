@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
+    <title>Pexeso</title>
+</head>
+<body>
+    <header>
+        <h1>Největší přeborníci pexesa</h1>
+    </header>
+    <!--/*@thymesVar id="prebornik" type="java.util.List<cz.czechitas.webapp.Hrac>"*/-->
+
+
+     <div class="kontejnerNaTabulku">
+    <table id="hraci">
+        <tr>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Počet vyhraných turnajů</th>
+            <th>Počet turnajů celkem</th>
+            <th>Procento úspěšnosti</th>
+        </tr>
+        <tr th:each="jedenHrac : ${prebornik}">
+            <td th:text="${jedenHrac.jmeno}">Karel</td>
+            <td th:text="${jedenHrac.prijmeni}">Novák</td>
+            <td th:text="${jedenHrac.pocetVyhranychTurnaju}">74</td>
+            <td th:text="${jedenHrac.pocetTurnajuCelkem}">95</td>
+            <td th:text="${jedenHrac.procentoUspesnosti} + '%'">???</td>
+        </tr>
+    </table>
+     </div>
+</body>
+</html>

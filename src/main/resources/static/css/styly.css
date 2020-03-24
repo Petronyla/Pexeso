@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0%;
+    background-image: url("../images/background.jpg");
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    text-shadow: 5px 2px 3px #572b09;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #4b0e05;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: #6b4f1c;
+    font-weight: bolder;
+}
+
+header{
+    height: 100px;
+    align-items: center;
+}
+
+header h1 {
+    margin: 20px 0 0 0;
+}
+
+.kontejnerNaOdkazy {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.kontejnerNaKartickyPexesa{
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    left: 15%;
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    width: 70%;
+    justify-content: center;
+    align-content: space-around;
+    margin-bottom: 20px;
+}
+
+.kontejnerNaKartickyPexesa img{
+    margin: 10px 10px 0 10px;
+    border-width: 4px;
+    border-color: #6b4f1c;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.kontejnerNaTabulku {
+    display: flex;
+    justify-content: center;
+}
+
+#hraci {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin-top: 10px;
+}
+
+#hraci td, #hraci th {
+    border: 1px solid #4b0e05;
+    padding: 8px;
+}
+
+#hraci tr:nth-child(even){background-color: #e8e9db;}
+
+#hraci th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6b4f1c;
+    color: #e8e9db;
+}
+
+
+/**************** MOBILE ****************/
+
+@media (max-width: 1100px) {
+    .page { width: 95%;}
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.8em; }
+    h4 { font-size: 1.6em; }
+    h5 { font-size: 1.4em; }
+    h6 { font-size: 1.2em; }
+}
